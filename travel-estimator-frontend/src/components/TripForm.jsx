@@ -26,4 +26,5 @@ const TripForm = ({ setTripData }) => {
         </form>
     );    
 };
+
 export default TripForm;

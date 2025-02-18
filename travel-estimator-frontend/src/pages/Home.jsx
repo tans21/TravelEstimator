@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TripForm } from "../components/TripForm";
-import { TripResult } from "../components/TripResult";
+import TripForm  from "../components/TripForm";
+import TripResult from "../components/TripResult";
 
 const Home = () => {
     const [tripData, setTripData] = useState(null);
