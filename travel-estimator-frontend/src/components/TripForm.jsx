@@ -9,6 +9,7 @@ const TripForm = ({ setTripData }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            const formattedDate = new Date(date).toISOString().split("T")[0];
             const result = await calculateTripCost(source,destination,date);
             setTripData(result);
         }

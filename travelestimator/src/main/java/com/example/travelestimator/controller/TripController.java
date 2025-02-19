@@ -22,7 +22,7 @@ public class TripController {
     private TripService tripService;
 
     @PostMapping("/calculate")
-    public ResponseEntity<Trip> calculateTrip(@RequestParam String source, @RequestParam String destination, @RequestParam String date) {
+    public ResponseEntity<Trip> calculateTrip(@RequestParam String source, @RequestParam String destination, @RequestParam String date) {        
         LocalDate tripDate = LocalDate.parse(date);
         Trip trip = tripService.calculateTripCost(source, destination, tripDate);
         return ResponseEntity.ok(trip);
